@@ -102,3 +102,6 @@ opacity:1;
 transform:translateY(0);
 }
   }
+#finalPage {
+    animation: fadeIn 1.5s ease;
+}
