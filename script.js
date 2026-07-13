@@ -25,3 +25,17 @@ function showFinal() {
     document.getElementById("letterPage").style.display = "none";
     document.getElementById("finalPage").style.display = "block";
 }
+setInterval(function () {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💗";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 20) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function () {
+        heart.remove();
+    }, 6000);
+}, 500);
