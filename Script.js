@@ -13,7 +13,7 @@ function checkPassword() {
     setTimeout(function () {
     document.getElementById("loadingPage").style.display = "none";
      document.getElementById("letterPage").style.display = "block";
-      document.getElementById("successPage").style.display = "block";
+      
     }, 3000);
 
   } else {
