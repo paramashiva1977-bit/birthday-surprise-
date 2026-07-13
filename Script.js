@@ -21,3 +21,7 @@ function checkPassword() {
       "❌ Oops... that's not the key to my heart ❤️";
   }
 }
+function showFinal() {
+    document.getElementById("letterPage").style.display = "none";
+    document.getElementById("finalPage").style.display = "block";
+}
