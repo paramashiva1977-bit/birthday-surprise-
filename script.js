@@ -39,3 +39,43 @@ setInterval(function () {
         heart.remove();
     }, 6000);
 }, 500);
+// 🎵 Romantic music-box melody
+function playRomanticMelody() {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    const ctx = new AudioCtx();
+
+    const notes = [
+        523.25, // C5
+        659.25, // E5
+        783.99, // G5
+        880.00, // A5
+        783.99, // G5
+        659.25, // E5
+        523.25  // C5
+    ];
+
+    notes.forEach((freq, index) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.type = "triangle";
+        osc.frequency.value = freq;
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        const start = ctx.currentTime + index * 0.35;
+
+        gain.gain.setValueAtTime(0, start);
+        gain.gain.linearRampToValueAtTime(0.15, start + 0.05);
+        gain.gain.exponentialRampToValueAtTime(0.001, start + 0.35);
+
+        osc.start(start);
+        osc.stop(start + 0.35);
+    });
+}
+
+// Plays once on the first click
+document.addEventListener("click", function () {
+    playRomanticMelody();
+}, { once: true });
