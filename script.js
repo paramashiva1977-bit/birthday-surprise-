@@ -1,6 +1,12 @@
-function nextPage() {
-  document.getElementById("welcome").style.display = "none";
-  document.getElementById("passwordPage").style.display = "block";
+
+ function nextPage() {
+    const music = document.getElementById("bgMusic");
+    music.currentTime = 0;
+    music.play();
+
+    document.getElementById("welcome").style.display = "none";
+    document.getElementById("passwordPage").style.display = "block";
+ }
 }
 
 function checkPassword() {
