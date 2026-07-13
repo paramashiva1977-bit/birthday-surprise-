@@ -7,7 +7,7 @@
     document.getElementById("welcome").style.display = "none";
     document.getElementById("passwordPage").style.display = "block";
  }
-}
+
 
 function checkPassword() {
   let pass = document.getElementById("password").value.toLowerCase();
