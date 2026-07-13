@@ -1,4 +1,5 @@
 function nextPage() {
+  document.getElementById("bgMusic").play();
   document.getElementById("welcome").style.display = "none";
   document.getElementById("passwordPage").style.display = "block";
 }
