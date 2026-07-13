@@ -124,3 +124,18 @@ transform:translateY(0);
 }
 
 
+.sijo-photo{
+    width:220px;
+    max-width:80%;
+    display:block;
+    margin:20px auto;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(255,255,255,0.5);
+}
+
+#finalPage{
+    background: url("Sijo.png") center center/cover no-repeat;
+    min-height:100vh;
+    color:white;
+    text-shadow:2px 2px 8px black;
+    }
