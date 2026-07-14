@@ -20,6 +20,9 @@ function checkPassword() {
             document.getElementById("loadingPage").style.display = "none";
             document.getElementById("letterPage").style.display = "block";
         }, 3000);
+    setTimeout(function () {
+    window.scrollTo(0, 0);
+}, 100);
     } else {
         document.getElementById("wrong").innerHTML =
             "❌ Oops... that's not the key to my heart ❤️";
