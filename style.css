@@ -10,10 +10,11 @@ background: linear-gradient(135deg, #f8e1f4, #d6e6ff);
 color:#4a2c40;
 display:flex;
 justify-content:center;
-align-items:center;
-height:100vh;
+align-items:flex-start;
+min-height:100vh;
 text-align:center;
-overflow:hidden;
+overflow-y:auto;
+padding:20px;
 }
 
 #welcome,
@@ -183,3 +184,16 @@ transform:translateY(0);
     from{opacity:.4;}
     to{opacity:1;}
 }
+#letterPage{
+    width:90%;
+    max-width:700px;
+    background:rgba(255,255,255,0.9);
+    border-radius:20px;
+    padding:25px;
+    margin:40px auto;
+}
+
+.letter{
+    line-height:1.9;
+    font-size:20px;
+    }
